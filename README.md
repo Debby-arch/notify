@@ -31,9 +31,11 @@ Copy the webhook URL.
 
 Configure the script:
 
-Open notify-discord.py
-Replace YOUR_DISCORD_WEBHOOK_URL with the actual webhook URL.
-Customize REMINDER_MESSAGE if desired.
+Open `notify-discord.py`
+
+Replace `YOUR_DISCORD_WEBHOOK_URL` with the actual webhook URL.
+
+Customize `REMINDER_MESSAGE` if desired.
 
 Usage:
 
@@ -47,7 +49,7 @@ The bot will run continuously and send reminders at the scheduled time.
 
 Customization
 
-Adjust the send_reminder_message function in notify-discord.py to modify the timezone or other scheduling parameters if needed.
+Adjust the `send_reminder_message` function in `notify-discord.py` to modify the timezone or other scheduling parameters if needed.
 
 Contributions:
 
