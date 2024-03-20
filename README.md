@@ -15,13 +15,15 @@ Installation:
 Clone this repository:
 
 Bash
+```
 git clone https://github.com/Debby-arch/notify.git
-
+```
 Install dependencies:
 
 Bash
+```
 pip install schedule requests
-
+```
 Set up Discord webhook:
 
 Create a webhook in your Discord server.
@@ -38,8 +40,9 @@ Usage:
 Run the script:
 
 Bash
+```
 python notify-discord.py
-
+```
 The bot will run continuously and send reminders at the scheduled time.
 
 Customization
