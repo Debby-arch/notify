@@ -1,0 +1,26 @@
+import datetime
+import pytz
+from discord_webhook import DiscordWebhook
+
+# Define the Discord webhook URL
+WEBHOOK_URL = 'https://discord.com/api/webhooks/1220106109830959204/emgnryRV6YWTfUIxrzC1KTI-EXjAWorWeCZYN5ZP5toljIuAPZepmWhBAAG58CdSkqUi'
+
+def send_reminder():
+    # Get the current date and time in East African Time (EAT)
+    tz_eat = pytz.timezone('Africa/Nairobi')
+    current_time = datetime.datetime.now(tz_eat)
+
+    # Check if it's Monday through Friday and the time is 09:00
+    if current_time.weekday() < 5 and current_time.hour == 9:
+        # Construct the reminder message
+        reminder_message = f"Hey! Don't forget to post today's challenge! 🚀"
+
+        # Send the reminder via Discord webhook
+        webhook = DiscordWebhook(url=WEBHOOK_URL, content=reminder_message)
+        response = webhook.execute()
+        print("Reminder sent successfully!")
+    else:
+        print("No reminder needed at this time.")
+
+if __name__ == "__main__":
+    send_reminder()
